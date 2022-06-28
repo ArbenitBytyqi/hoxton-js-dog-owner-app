@@ -4,11 +4,16 @@ let dogSection = document.querySelector(".main__dog-section")
 
 console.log(dogList, dogSection)
 
-function addDogListItem() {
+function addDogListItem(dog) {
     for (let dog of data) {
         let dogLi = document.createElement('li')
         dogLi.className = 'dogs-list__button'
         dogLi.textContent = dog.name
+
+        dogLi.addEventListener("click", function () {
+            displayDog(dog)
+        })
+
         dogList.append(dogLi)
     }
 }
@@ -46,9 +51,9 @@ function displayDog(dog) {
     let behaviorButton = document.createElement("button")
     behaviorButton.className = 'main__dog-section__btn'
     if (dog.isGoodDog) {
-        behaviorButton.textContent = 'Doog dod!'
+        behaviorButton.textContent = 'Doog god!'
     } else {
-        behaviorButton.textContent = 'Dab dod!'
+        behaviorButton.textContent = 'Dab god!'
     }
 
     description.append(bio, bioContent)
