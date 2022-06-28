@@ -2,8 +2,6 @@ let dogList = document.querySelector(".dogs-list")
 
 let dogSection = document.querySelector(".main__dog-section")
 
-console.log(dogList, dogSection)
-
 function addDogListItem(dog) {
     for (let dog of data) {
         let dogLi = document.createElement('li')
@@ -61,4 +59,3 @@ function displayDog(dog) {
     dogSection.append(name, image, description, behaviorP, behaviorButton)
 }
 
-displayDog(data[0])
